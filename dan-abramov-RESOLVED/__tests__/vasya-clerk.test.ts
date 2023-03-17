@@ -23,15 +23,28 @@ tickets([25, 100]) // => NO. Vasya will not have enough money to give change to 
 tickets([25,50,25,100,25,25,25,100,25,25,50,100,50,25]); // NO
 */
 
-function tickets(bills: number[]) {}
+function tickets(bills: number[]) {
+  let caja = bills[0]
+  for (let i = 1; i < bills.length; i++) {
+    const nextBill = bills[i];
+    if(caja<nextBill){
+      return false
+    }else{
+      caja+=nextBill
+    }
+  }
+  return true
+}
 
 describe("tests", () => {
   describe("YES", () => {
-    it("[25, 25, 50]", () => expect(tickets([25, 25, 50])).toBe("YES"));
+    it("[25, 25, 50]", () => expect(tickets([25, 25, 50]))
+    .toBe("YES"));
   });
 
   describe("NO", () => {
-    it("[25, 100]", () => expect(tickets([25, 100])).toBe("NO"));
+    it("[25, 100]", () => expect(tickets([25, 100]))
+    .toBe("NO"));
     it("[25,50,25,100,25,25,25,100,25,25,50,100,50,25]", () =>
       expect(
         tickets([25, 50, 25, 100, 25, 25, 25, 100, 25, 25, 50, 100, 50, 25])

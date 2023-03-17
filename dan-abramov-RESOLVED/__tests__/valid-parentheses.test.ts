@@ -23,7 +23,19 @@ and false if it's invalid.
 
 */
 
-function validParentheses(str: String) {}
+function validParentheses(str: String) {
+  let suma = 0
+  for(let i=0; i<str.length; i++){
+    if(suma<0){
+      return false
+    }if(str[i]==="("){
+      suma++
+    }else if(str[i]===")"){
+      suma--
+    }
+    return suma===0
+  }
+}
 
 describe("tests", () => {
   it(`values: "("`, () => expect(validParentheses("(")).toBe(false));

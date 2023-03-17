@@ -31,7 +31,18 @@ Explanation: Only one meeting occurs.
 
 // <<<>
 
-function countSalutes(str: String) {}
+function countSalutes(str: String) {
+  let people = str.replace(/-/g, "")
+let suma = 0
+for(let i = 0; i<people.length; i++){
+  if(people[i]===">"){
+    const encuentros: number | undefined = people.substring(i).match(/</g)?.length
+    if(encuentros!==undefined){suma+=encuentros * 2}
+    }
+}
+return suma
+
+}
 
 describe("tests", () => {
   it("4", () => expect(countSalutes("<---->---<---<-->")).toBe(4));
