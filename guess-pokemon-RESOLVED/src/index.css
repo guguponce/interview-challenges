@@ -1,0 +1,77 @@
+#title{
+  text-align: center;
+}
+main {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: flex-start;
+  gap: 1rem;
+  justify-content: space-around;
+  min-height: 90vh;
+  width: 95vw;
+  margin: 0 auto;
+}
+.pastPokemonsContainer {
+  width: 100%;
+  margin: 2rem;
+  display: flex;
+  align-self: flex-start;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  max-height: 90vh;
+}
+.pastPokemonsImgs{
+  width: 100%;
+  display: flex;  align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+overflow-y: auto;
+}
+.pastPokemon {
+  width: 100px;
+}
+#guess-img {
+  height: 60vh;
+  image-rendering: pixelated;
+  filter: brightness(0);
+}
+img#guess-img.show {
+  filter: none;
+}
+
+button.nes-btn {
+  margin: 1rem 0;
+}
+
+@media (orientation: portrait) {
+  main {
+    margin-top: 0rem;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "main" "correct" "incorrect";
+  }
+  #guess-img{
+    width: 100%;
+    height: auto;
+  }
+  #incorrect-container {
+    width: 95vw;
+   
+   align-self: center; grid-area: incorrect;
+  }
+  #correct-container {
+    align-self: center;
+    grid-area: correct;
+    width: 95vw;
+    margin-bottom: 1rem;
+  }
+  #main-game {
+    grid-area: main;
+    margin: 1rem auto;
+    width: 95vw;
+  }
+}
