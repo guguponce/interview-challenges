@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Masonry</title>
+    
+<link rel="stylesheet" href="mystyle.css">
+    <style>
+      /* Change code after this line */
+      main {
+  height: 600px;
+  display: grid;
+  gap: 0.25rem;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, 100px);
+  grid-auto-columns: 100px;
+  scroll-behavior: smooth;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tall {
+  grid-row: span 2 / auto;
+}
+.wide {
+  grid-column: span 2 / auto;
+}
+.big {
+  grid-column: span 2 / auto;
+  grid-row: span 2 / auto;
+}
+
+      /* Change code before this line */
+    </style>
+  </head>
+  <body>
+    <main>
+      <img src="https://loremflickr.com/320/240" class="wide"/>
+      <img src="https://loremflickr.com/420/340" class="wide"/>
+      <img src="https://loremflickr.com/220/250" class="wide"/>
+      <img src="https://loremflickr.com/520/280" class="big"/>
+      <img src="https://loremflickr.com/360/200" class="wide"/>
+      <img src="https://loremflickr.com/350/340" class="big"/>
+      <img src="https://loremflickr.com/310/140" class="wide"/>
+      <img src="https://loremflickr.com/300/340" class="wide"/>
+      <img src="https://loremflickr.com/330/540" class="big"/>
+      <img src="https://loremflickr.com/250/540" class="wide"/>
+      <img src="https://loremflickr.com/320/440" class="wide"/>
+      <img src="https://loremflickr.com/370/340" class="wide"/>
+      <img src="https://loremflickr.com/230/240" class="wide"/>
+      <img src="https://loremflickr.com/230/340" class="big"/>
+    </main>
+  </body>
+</html>

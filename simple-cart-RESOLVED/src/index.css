@@ -92,7 +92,7 @@ article > div {
   height: 100%;
 }
 
-article > div > p:nth-of-type(1) {
+article > div > div > p {
   font-weight: 500;
   font-size: 20px;
 }
@@ -114,4 +114,19 @@ aside {
 
 aside > button {
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.quantityContainer{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.quantityBtn{
+  margin: 0;  
+}
+.productNamePrice{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
